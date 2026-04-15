@@ -16,7 +16,7 @@ const io = new Server(server, {
     origin: (origin, cb) => {
       if (!origin) return cb(null, true);
       if (origin.endsWith('.vercel.app') || origin.endsWith('.onrender.com') ||
-          origin === process.env.CLIENT_URL || origin === 'http://localhost:5173')
+          origin === process.env.CLIENT_URL || origin === 'https://advanced-chat-app-rbd3.vercel.app')
         return cb(null, true);
       cb(new Error(`CORS blocked: ${origin}`));
     },
